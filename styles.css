@@ -7,9 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*
-NAV
-*/
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
 
 nav {
     height: 80px;
@@ -20,6 +21,10 @@ img {
     width: 100%;
     height: 100%;
     max-height: 50vh;
+}
+
+p {
+    line-height: 1.5;
 }
 
 .nav__container {
@@ -132,7 +137,7 @@ button:active {
 
 .header__img--wrapper {
     padding: 20px;
-
+    z-index: 2;
 }
 
 .container {
@@ -145,14 +150,49 @@ button:active {
     margin: 0 auto;
 }
 
+.row__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*
 
 HIGHLIGHTS 
 
 */
 
+#highlights {
+    position: relative;
+    max-width: 100vw;
+}
+
+#highlights:after,
+#highlights:before {
+    background: url('assets/wave.svg');
+    content: "";
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#highlights:before {
+    transform: translateY(-100%);
+    top: 1px;
+}
+  
+#highlights:after {
+    transform: translateY(100%) rotate(180deg);
+    bottom: 1px;
+}
+
 .highlight__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight {
@@ -160,12 +200,12 @@ HIGHLIGHTS
     width: calc(100% / 3);
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
 .highlight_para {
     text-align: center;
+    max-width: 280px;
 }
 
 .hightlight__img {
@@ -184,5 +224,16 @@ HIGHLIGHTS
 .hightlight__subtitle {
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
+/*
+
+FEATURES
+
+*/
+
+#features {
+    padding-top: 8vw;
+    background-color: rgba(115, 66, 214, 0.1);
+}
