@@ -7,6 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 100vw;
     overflow-x: hidden;
@@ -19,6 +23,7 @@ nav {
   
 img {
     width: 100%;
+    height: 100%;
 }
   
 p {
@@ -144,9 +149,10 @@ button:active {
 }
   
 .menu--open .menu__backdrop {
-    visibility: visible;
+    display: flex;
     opacity: 1;
     transform: translate(0);
+    visibility: visible;
 }
   
 .menu__links {
@@ -203,40 +209,11 @@ header {
     align-items: center;
 }
 
-h1 {
-    font-size: 56px;
-    color: #7342d6;
-    margin-bottom: 24px;
-    align-items: center;
-}
-
-h2 {
-    font-size: 32px;
-    margin-bottom: 32px;
-    text-align: center;
-}
-
-button {
-    cursor: pointer;
-}
-
-button:active {
-    transform: translateY(1px);
-}
-
-.btn {
-    background-color: #7342d6;
-    color: white;
-    padding: 12px 24px;
-    font-size: 20px;
-    border-radius: 4px;
-    border: none;
-}
-
 .header__img--wrapper {
+    max-height: 50vh;
     padding: 20px;
-    z-index: 2;
-}
+    z-index: 50;
+  }
 
 .container {
     padding: 56px 0;
@@ -246,7 +223,6 @@ button:active {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
 }
 
 .row__column {
@@ -354,7 +330,7 @@ FEATURES
 .book__img {
     max-height: 380px;
     transition: all 300ms ease;
-    cursor: no-drop;
+    cursor: not-allowed;
 }
 
 .book__img--wrapper {
@@ -414,7 +390,7 @@ footer {
 }
 
 .footer__logo--img {
-    width: 165px;
+    width: 160px;
     filter: grayscale(1) invert(1);
 }
 
