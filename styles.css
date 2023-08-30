@@ -414,7 +414,11 @@ footer {
 }
 
 
-/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+/* 
+
+ SMALL PHONES, TABLETS, LARGE SMARTPHONES 
+
+*/
 @media (max-width: 768px) {
     .header__description {
       padding: 0 24px;
@@ -438,7 +442,11 @@ footer {
   }
   
   
-  /* SMALL PHONES, LARGE SMARTPHONES */
+  /* 
+  
+  SMALL PHONES, LARGE SMARTPHONES 
+  
+  */
   @media (max-width: 550px) {
     .btn__menu {
       display: block;
